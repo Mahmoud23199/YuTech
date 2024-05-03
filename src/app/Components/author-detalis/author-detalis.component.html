@@ -1,1 +1,46 @@
-<p>author-detalis works!</p>
+<div class="row py-5 px-4">
+    <div class="col-xl-4 col-md-6 col-sm-10 mx-auto">
+        <!-- Profile widget -->
+        <div class="bg-white shadow rounded overflow-hidden" style="position: relative;">
+            <div style="position:absolute; top: 0;right:0;">
+                <button type="button" class="btn btn-secondary" routerLink= "/home" ><i class="fa-solid fa-arrow-left-long"></i> Go Back</button>
+               </div>
+            <div class="px-4 pt-0 pb-4 bg-dark " >
+                <div class="media align-items-end profile-header">
+                    <div class="profile mr-3"><img src="https://assets.codepen.io/460692/internal/avatars/users/default.png?format=auto&version=1688931977&width=80&height=80" alt="..." width="130" class="rounded mb-2 img-thumbnail"></div>
+                    <div class="media-body mb-5 text-white">
+                        <h4 class="mt-0 mb-0">{{authorItem?.authorName}}</h4>
+                        <p class="small mb-4 pb-3"> <i class="fa fa-map-marker mr-2"></i> {{authorItem?.country}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-light p-4 d-flex justify-content-end text-center">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <h5 class="font-weight-bold mb-0 d-block">43</h5><small class="text-muted"> <i class="fa fa-picture-o mr-1"></i>Post</small>
+                    </li>
+                    <li class="list-inline-item">
+                        <h5 class="font-weight-bold mb-0 d-block">84K</h5><small class="text-muted"> <i class="fa fa-user-circle-o mr-1"></i>Followers</small>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="py-4 px-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="mb-0">Recent Post news</h5>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 mb-2 pr-lg-1 m-1" *ngFor="let item of authorItem?.relatNews" style="box-shadow: 0px 0px 5px gray;">
+                        <img [src]=item.imageUrl  alt="" class="img-fluid rounded shadow-sm" style="max-width:100px;max-height:150px;">
+                        <h4>{{item.title}}</h4>
+                        <p>creationDate:{{ item.creationDate | date: 'd MMM yyyy' }}</p>
+                        <p>publicationDate: {{item.publicationDate | date: 'd MMM yyyy'}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
