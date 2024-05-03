@@ -1,0 +1,11 @@
+a:hover {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease; 
+  }
+  
+  footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 250px;
+  }

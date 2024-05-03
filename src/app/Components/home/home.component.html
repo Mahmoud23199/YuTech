@@ -1,0 +1,70 @@
+<app-nav></app-nav>
+<div class="container " style="margin-top: 50px  !important;">
+  <div class="row">
+    
+    <!-- <div class="newsContent"> -->
+      <!-- <div class="d-flex p-2 rounded-1" id="control">
+        
+         <div>
+          <select class="form-select form-select-lg mb-2" style="height: 45px;" aria-label="Large select example">
+            <option selected>Sort By</option>
+            <option value="title">Name</option>
+            <option value="publicationDate">PublicationDate</option>
+            <option value="creationDate">CreationDate</option>
+          </select>
+          
+          <select class="form-select form-select-sm" aria-label="Small select example">
+            <option selected>Sort type</option>
+            <option value="ASC">Ascending</option>
+            <option value="DES">Descending</option>
+          </select>
+         </div>
+        
+      </div>
+        <hr> -->
+      <!-- <section class="wrapper"> -->
+        <div class="container">
+          <div class="row">
+            <div  *ngFor ="let item of newData" class=" col-lg-4 mb-4" (click)="goNewDetalis(item.id)">
+              <div
+                class="imgbg card text-dark  click-col">
+                <!-- <img
+                  class="card-img d-none"
+                  src="https://source.unsplash.com/600x900/?tech,street"
+                  alt="Creative Manner Design Lorem Ipsum Sit Amet Consectetur dipisi?"
+                /> -->
+                <div class="card-img-overlay d-flex flex-column">
+                  <div class="card-body">
+                    <small class="card-meta mb-2 text-warning">{{item.title}}</small>
+                    <h4 class="card-title mt-0">
+                      <a class="text-dark" 
+                        >{{item.description}}</a
+                      >
+                    </h4>
+                    <small><i class="far fa-clock"></i> {{ item.creationDate | date: 'd MMM yyyy' }}
+                    </small>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="media">
+                      <img
+                        class="mr-3 rounded-circle" (click)="goAuthorDetalis(item.author.authorId)"
+                        src="https://assets.codepen.io/460692/internal/avatars/users/default.png?format=auto&version=1688931977&width=80&height=80"
+                        alt="Generic placeholder image"
+                        style="max-width: 50px"
+                      />
+                      <div class="media-body">
+                        <h6 class="my-0 text-warning d-block">{{item.author.authorName}}</h6>
+                        <small class="text-dark">{{item.author.biography}}</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </section> -->
+    <!-- </div> -->
+  </div>
+</div>
